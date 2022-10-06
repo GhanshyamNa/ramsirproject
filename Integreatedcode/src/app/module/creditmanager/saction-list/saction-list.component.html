@@ -1,0 +1,42 @@
+<div class="container-xl">
+    <div class="table-responsive">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <h2>Loan <b>Sanctioned List</b></h2>
+                    </div>
+                </div>
+            </div>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Sanction Id</th>
+                        <th>Loan Id</th>
+                        <th>Name</th>
+                        <th>Mobile</th>
+                        <th>Sanction Amount</th>
+                        <th>Monthly EMI</th>
+                        <th>Total EMI</th>
+                        <th>Total Amount</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let sl of sanctionList">
+                        <td>{{sl.sanctionId}}</td>
+                        <td>{{sl.lal.loanAid}}</td>
+                        <td>{{sl.lal.applicant.customer.fullName}}</td>
+                        <td>{{sl.lal.applicant.customer.mobileNo}}</td>
+                        <td>{{sl.principalAmount}}</td>
+                        <td>{{sl.monthlyEMIAmount}}</td>
+                        <td>{{sl.totalInterest}}</td>
+                        <td>{{sl.totalAmount}}</td>
+                        <td><button class="btn btn-success" [routerLink]="['sanction-letter',sl.sanctionId]">Sanction Letter</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div> 
+<router-outlet></router-outlet>

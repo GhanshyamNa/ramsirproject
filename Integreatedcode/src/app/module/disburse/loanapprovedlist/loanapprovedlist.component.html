@@ -1,0 +1,38 @@
+<div class="container">
+    <table class="table table-striped" border="1">
+      <tbody >
+         <tr class="bg-success" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+          <td>LoanId</td> 
+          <td>Customer Name</td>         
+          <td>MonthlyEMIAmount</td>
+          <td>PrincipalAmount</td>
+          <td>TotalInterest</td>
+          <td>SanctionAmount</td>
+          <td>Cibil Score</td>
+          <td>TotalLoanRequired</td>
+          <td>TenureOfLoan</td>
+          <td>Loan Deduct</td>         
+        </tr> 
+         <tr *ngFor="let l1 of l" class="bg-warning" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+          
+          <td>{{l1.loanAid}}</td>
+          <td>{{l1.applicant.customer.fullName}}</td>        
+          <td>{{l1.monthlyEMIAmount}}</td>
+          <td>{{l1.principalAmount}}</td>
+          <td>{{l1.totalInterest}}</td>
+          <td>{{l1.sanction.sanctionedLoanAmount}}</td>                   
+          <td>{{l1.applicant.cibil.cibilScore}}</td> 
+          <td>{{l1.loanDetails.totalLoanRequired}}</td>
+          <td>{{l1.loanDetails.tenureofLoan}}</td>
+          <td> <a  [routerLink]="['bank']" [state]="l1">
+                        <i class="fa fa-edit"></i>
+                    </a></td>
+                  
+      
+          </tr> 
+      </tbody>
+    </table>
+  </div>
+  <router-outlet></router-outlet>
+
+

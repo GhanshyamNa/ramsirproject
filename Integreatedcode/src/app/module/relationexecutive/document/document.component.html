@@ -1,0 +1,27 @@
+
+<table border="2"  class="table table-dark center " style="text-align:center">
+    <tbody>
+      <tr style="color: aliceblue;background-color: crimson;">
+        <th >CustomerId</th>
+        <td>FullName</td>
+        <th >MobileNo</th>
+        <td>Email</td>
+        <td>CIBIL Score</td>
+        <td>Status</td>
+        <td>ReMark</td>
+        <td>Email Send</td>
+      </tr>
+
+      <tr mdbTableCol *ngFor="let el of cib">
+        <th >{{el.customer.customerId}}</th>
+        <td>{{el.customer.fullName}}</td>
+        <td>{{el.customer.mobileNo}}</td>
+        <td>{{el.customer.email}}</td>
+        <td>{{el.cibilScore}}</td>
+        <td>{{el.cibilStatus}}</td>
+        <td>{{el.cibilRemark}}</td>
+        <td><button class="btn btn-primary mr-1" routerLink="oeemail" [state]="el">Email send</button></td>
+      </tr>
+    </tbody>
+  </table> 
+  <router-outlet></router-outlet>

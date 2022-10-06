@@ -1,0 +1,64 @@
+
+ <form [formGroup]="registrationForm" (ngSubmit)="onsubmit()"> 
+  
+    <h3 style="text-align: center; color: darkviolet;">! Customer KYC Form !</h3>
+    <div class="jumbotron"style="text-align:center" >
+    <table class="table table-dark center " style="text-align:center" >
+       
+        <tr>
+            <td>Photo</td>
+            <td> <input type="file" (change)="onselectedFile1($event)" ></td>
+        </tr>
+        <tr>
+            <td>Signature</td>
+            <td> <input type="file"  (change)="onselectedFile2($event)" ></td>
+        </tr>
+        <tr>
+            <td>PanCard</td>
+            <td> <input type="file"  (change)="onselectedFile3($event)" ></td>
+        </tr>
+        <tr>
+            <td>Aaddress Proof </td>
+            <td> <input type="file"  (change)="onselectedFile4($event)" ></td>
+        </tr>
+        <tr>
+          <td>Income Document </td>
+          <td> <input type="file"  (change)="onselectedFile5($event)" ></td>
+      </tr>
+      <tr>
+        <td>Aadhar Card </td>
+        <td> <input type="file"  (change)="onselectedFile6($event)" ></td>
+    </tr>
+    <tr>
+      <td>Property Document</td>
+      <td> <input type="file"  (change)="onselectedFile7($event)" ></td>
+  </tr>
+  <tr>
+    <td>Blank Checque</td>
+    <td> <input type="file"  (change)="onselectedFile8($event)" ></td>
+</tr>
+        
+    </table>
+    <button class="btn btn-primary" type="submit">Submit</button>&nbsp;&nbsp;
+    
+   
+</div>
+</form>
+ <!-- <div class="container">
+    
+    <form [formGroup]="registrationForm" (ngSubmit)="onsubmit()">
+        Photo<input type="file" (change)="onselectedFile1($event)" ><br>
+        Signature <input type="file"  (change)="onselectedFile2($event)" ><br>
+        PanCard <input type="file"  (change)="onselectedFile3($event)" ><br>
+        Aaddress Proof<input type="file"  (change)="onselectedFile4($event)" ><br>
+        Income Document <input type="file"  (change)="onselectedFile5($event)" ><br>
+        Aadhar Card <input type="file"  (change)="onselectedFile6($event)" ><br>
+        Property Document<input type="file"  (change)="onselectedFile7($event)" ><br>
+        Blank Checque<input type="file"  (change)="onselectedFile8($event)" ><br>
+
+       
+        <input type="submit" value="Register" class="btn btn-success">
+    </form>
+</div>  
+
+ -->

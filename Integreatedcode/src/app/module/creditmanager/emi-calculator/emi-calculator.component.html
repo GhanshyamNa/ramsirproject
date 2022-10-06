@@ -1,0 +1,55 @@
+<div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6">
+        <div class="card rounded shadow">
+            <div class="card-body">
+                <h3 class="card-title text-center">EMI Calculator</h3> <i class="fa-solid fa-xmark-large"></i>
+                <hr>
+                <form [formGroup]="emicalculator" (ngSubmit)="calculate()">
+                    <div class="row" formGroupName="loandetails">
+                        <div class="col">
+                            <div class="form-group">
+                                <input type="text" class="form-control" formControlName="totalLoanRequired" disabled>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <input type="text" class="form-control" formControlName="tenureofLoan" disabled>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="row" formGroupName="sanction">  
+                        <div class="col">
+                            <div class="form-group">
+                                <input type="text" class="form-control" formControlName="rateofInterest" disabled>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <input type="text" class="form-control" formControlName="sanctionedAmount" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10 text-center">
+                            <button type="submit" class="btn btn-success" style="width:100px; height: 40px; font-size:medium;" (click)="goBack()">Calculate</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <button type="button" class="btn btn-warning" style="width:120px; height: 40px; font-size:medium;" (click)="goBack()">Back</button>
+                        </div>
+                        <div class="col-md-1"></div>
+
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+
+    </div>
+</div>
+
+
+

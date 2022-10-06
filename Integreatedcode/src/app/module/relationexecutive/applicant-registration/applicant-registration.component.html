@@ -1,0 +1,151 @@
+
+<body>
+    <div class="container">
+        <form [formGroup]="registrationForm" (ngSubmit)="onsubmit()"><h5>PERSONAL DETAILS</h5>
+           
+            <div formGroupName="customer">
+            <div>
+              <h6  style="text-align: center;">CUSTOMER ID <input type="text" class="customerId"  placeholder="" formControlName="customerId" style="text-align: center;"></h6> 
+            </div> 
+                <div  class="form-row">
+                    <div class="form-group col">
+                        
+                FUNAME:<input type="text" class="form-control"  placeholder=" FullName" formControlName="fullName">
+            </div>
+            <div class="form-group col">
+                GENDER:<input type="text" class="form-control"  placeholder=" Gender" formControlName="gender">
+            </div>
+            </div>
+            <div  class="form-row">
+                <div class="form-group col">
+                AGE:<input type="text" class="form-control"  placeholder=" Age" formControlName="age">
+            </div>
+            <div class="form-group col">
+                MOBILE NO:<input type="text" class="form-control"  placeholder=" MobileNo" formControlName="mobileNo">
+            </div>
+            <div class="form-group col">
+                EMAIL:<input type="text" class="form-control"  placeholder=" E-mail" formControlName="email">
+            </div></div>
+            <div  class="form-row">
+                <div class="form-group col">
+                PANCARD NO:<input type="text" class="form-control"  placeholder=" PancardNo" formControlName="pancardNo">
+            </div>
+            <div class="form-group col">
+                DOB:<input type="text" class="form-control"  placeholder=" DOB" formControlName="dob">
+            </div>
+            <div class="form-group col">
+                AadharNo:<input type="text" class="form-control"  placeholder=" AadharNo" formControlName="aadharNo">
+
+            </div></div>
+            </div><br>
+              <div  class="form-row">
+                   <div class="form-group col">
+                         EDUCATION:<input type="text" class="form-control" placeholder=" Education" formControlName="education">
+                   </div>
+                   <div class="form-group col">
+                    NATIONALITY:<input type="text" class="form-control" placeholder="Nationality " formControlName="nationality">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputState">PROFESSION TYPE</label>
+                    <select id="inputState" class="form-control" formControlName="profession" >
+                      <option selected>Employee</option>
+                      <option>Bussiness</option>
+                      <option>other</option>
+                    </select>
+                  </div>
+              </div>
+            
+              <div formGroupName="caddr" ><h5>CURRENT ADDRESS</h5>
+                <div  class="form-row">
+                    <div class="form-group col">
+                STREET NAME:<input type="text" class="form-control" placeholder="StreetName" formControlName="streetName" [(ngModel)]="streetName"><br>
+                    </div>
+                    <div class="form-group col">
+                AREA NAME:<input type="text" class="form-control" placeholder="AreaName" formControlName="areaName" [(ngModel)]="areaName"><br>
+            </div>
+            <div class="form-group col">
+                CITY NAME:<input type="text" class="form-control" placeholder=" CityName" formControlName="cityName" [(ngModel)]="cityName"><br>
+            </div></div>
+            <div  class="form-row">
+                <div class="form-group col">
+                DISTRICT NAME:<input type="text" class="form-control" placeholder="DistrictName" formControlName="districtName" [(ngModel)]="districtName"><br>
+                </div><div class="form-group col">
+                STATE NAME:<input type="text" class="form-control" placeholder="StateName" formControlName="stateName" [(ngModel)]="stateName"><br>
+                 </div><div class="form-group col">
+                PINCODE NO:<input type="text" class="form-control" placeholder="PincodeNo" formControlName="pincodeNo" [(ngModel)]="pincodeNo"><br>
+            </div></div>
+            </div><br>
+
+            <div formGroupName="paddr"><h5>PERMANENT ADDRESS</h5>
+                <div class="form-group">
+                    <input type="checkbox" id="checkBox"  onclick="autoFilAddress()"> Same as permanent address
+                 </div>
+                <div  class="form-row">
+                    <div class="form-group col">
+                        STREET NAME:<input type="text" class="form-control" placeholder="{{streetName}}" formControlName="streetName" ><br>
+                    </div>
+                    <div class="form-group col">
+                        AREA NAME:<input type="text" class="form-control" placeholder="{{areaName}}" formControlName="areaName"><br>
+            </div>
+            <div class="form-group col">
+                CITY NAME:<input type="text" class="form-control" placeholder="{{cityName}}" formControlName="cityName"><br>
+            </div></div>
+            <div  class="form-row">
+                <div class="form-group col">
+                    DISTRICT NAME:<input type="text" class="form-control" placeholder="{{districtName}}" formControlName="districtName"><br>
+                </div><div class="form-group col">
+                    STATE NAME:<input type="text" class="form-control" placeholder="{{stateName}}" formControlName="stateName"><br>
+                 </div><div class="form-group col">
+                    PINCODE NO:<input type="text" class="form-control" placeholder="{{pincodeNo}}" formControlName="pincodeNo"><br>
+            </div></div>
+            </div><br>
+
+            <div formGroupName="loanDetails"><h5>LOAN DETAILS </h5>
+                <div  class="form-row">
+                    <div class="form-group col">
+                TOTAL LOAN REQUIRED:<input type="text" class="form-control" placeholder="TotalLoanRequired" formControlName="totalLoanRequired"><br>
+                    </div>
+                    <div class="form-group col">
+                TENURE OF LOAN:<input type="text" class="form-control" placeholder="TenureofLoan" formControlName="tenureofLoan">
+            </div> <div class="form-group col">
+                ANNUAL INTEREST:<input type="text" class="form-control" placeholder="annualInterest" formControlName="annualInterest">   
+            </div></div>
+            </div><br>
+
+            <div formGroupName="propertyDetails"><h5>PROPERTY DETAILS </h5>
+                <div  class="form-row">
+                    <div class="form-group col">
+                PROPERTY TYPE:<input type="text" class="form-control" placeholder="PropertyType" formControlName="propertyType"><br>
+                </div><div class="form-group col">
+                PROPERTY PRICE:<input type="text" class="form-control" placeholder="PropertyPrice" formControlName="propertyPrice"><br>
+            </div><div class="form-group col">
+               PROPERTY LOCATION:<input type="text" class="form-control" placeholder="PropertyLocation" formControlName="propertyLocation"><br>   
+            </div></div>
+            </div><br>
+
+            <div formGroupName="bankDetails"><h5>BANK DETAILS</h5>
+                <div  class="form-row">
+                    <div class="form-group col">
+                ACCOUNT   NUMBER:<input type="text" class="form-control" placeholder="Account Number" formControlName="caccountNo"><br>
+                    </div><div class="form-group col">
+                IFSC Code:<input type="text" class="form-control" placeholder="IFSCCode" formControlName="ifscCode"><br>
+            </div><div class="form-group col">
+                BANK NAME:<input type="text" class="form-control" placeholder="Bank Name" formControlName="bankName"><br> 
+                </div></div>
+                <div  class="form-row">
+                    <div class="form-group col">
+                BANK CODE:<input type="text" class="form-control" placeholder="Bankcode" formControlName="bankcode"><br>
+            </div><div class="form-group col">
+                MICR CODE:<input type="text" class="form-control" placeholder="MICR code" formControlName="micrcode"><br>
+            </div><div class="form-group col">
+                BRANCH ADDRESS:<input type="text" class="form-control" placeholder="Branch Address" formControlName="branchAddress"><br>   
+            </div></div>
+            </div>
+            <input type="submit" value="Registration" class="btn btn-success">&nbsp;&nbsp;
+            <input type="submit" value="Back" (click)="goBack()" class="btn btn-success">
+        </form>
+    </div>
+    </body>
+    
+
+

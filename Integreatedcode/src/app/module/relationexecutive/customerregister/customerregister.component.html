@@ -1,0 +1,36 @@
+
+<table border="2"  class="table table-dark center " style="text-align:center">
+    <tbody>
+      <tr style="color: aliceblue;background-color: crimson;">
+        <th >CustomerId</th>
+        <td>FullName</td>
+        <td>Gender</td>
+        <td>DOB</td>
+        <td>Age</td>
+        <th >MobileNo</th>
+        <td>Email</td>
+        <td>pancardNo</td>
+        <td>aadharNo</td>
+        <td>Registration</td>
+        <td>Document Upload</td>
+      </tr>
+
+      <tr mdbTableCol *ngFor="let el of std">
+        <th >{{el.customerId}}</th>
+        <td>{{el.fullName}}</td>
+        <td>{{el.gender}}</td>
+        <td>{{el.dob}}</td>
+        <td>{{el.age}}</td>
+        <td>{{el.mobileNo}}</td>
+        <td>{{el.email}}</td>
+        <td>{{el.pancardNo}}</td>
+        <td>{{el.aadharNo}}</td>
+        <td><button class="btn btn-primary mr-1" [routerLink]="['register']" [state]="el" >Registration</button></td>
+        <td><button class="btn btn-primary mr-1" routerLink="uploaddoc" [state]="el" >Document Upload</button></td> 
+         
+        
+
+      </tr>
+    </tbody>
+  </table> 
+  <router-outlet></router-outlet>

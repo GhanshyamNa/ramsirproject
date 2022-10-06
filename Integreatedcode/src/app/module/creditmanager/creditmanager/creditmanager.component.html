@@ -1,0 +1,43 @@
+<div class="container-xl">
+    <div class="table-responsive">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <h2>Loan <b>Approved List</b></h2>
+                    </div>
+                </div>
+            </div>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Application Id</th>
+                        <th>Loan Id</th>
+                        <th>Name</th>
+                        <th>Mobile</th>
+                        <th>Address</th>
+                        <th>Loan Requested</th>
+                        <th>Tenure of Loan</th>
+                        <th>Sanctioned Amount</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let a of customerList">
+                        <td>{{a.applicant.applicationId}}</td>
+                        <td>{{a.loanAid}}</td>
+                        <td>{{a.applicant.customer.fullName}}</td>
+                        <td>{{a.applicant.customer.mobileNo}}</td>
+                        <td>{{a.applicant.caddr.cityName}},{{a.applicant.caddr.districtName}},{{a.applicant.caddr.pincodeNo}}</td>
+                        <td>{{a.loandetails.totalLoanRequired}}</td>
+                        <td>{{a.applicant.loandetails.tenureofLoan}}</td>
+                        <td>{{a.sanction.sanctionedAmount}}</td>
+                        <td><button class="btn btn-success" [routerLink]="['emicalculator']" [state]="a">EMI Calculate</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div> 
+<router-outlet></router-outlet>
+<router-outlet></router-outlet> 

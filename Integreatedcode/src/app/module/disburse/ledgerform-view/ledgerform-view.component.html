@@ -1,0 +1,61 @@
+
+<div class="container">
+    <table class="table table-success table-striped" border="1">
+        <tbody>
+            <tr class="bg-info"> 
+                <th> ledgerId</th>
+                <th> customerName</th>
+                <th> ledgerCreationDate</th>
+                <th> totalLoanAmount</th>
+                <th> payableAmountWithIntrest</th>
+                <th> tenureInYear</th>
+                <th> monthlyEMI</th>
+                <th>amountPaidTillDate</th>
+                <th>remainingAmount</th>
+                <th>defaulterCount</th>
+                <th>previousEmiStatus</th>
+                <th>currentMonthEmiStatus</th>
+                <th>loanEndDate</th>
+                <th>loanStatus</th>
+                
+            </tr>
+        </tbody>
+            <tr *ngFor="let data of ledgerlist">
+                <td>{{data.ledgerId}}</td>
+                <td>{{data.customerName}}</td>
+                <td>{{data.ledgerCreationDate}}</td>
+                <td>{{data.totalLoanAmount}}</td>
+                <td>{{data.payableAmountWithIntrest}}</td>
+                <td>{{data.monthlyEMI}}</td>
+                <td>{{data.amountPaidTillDate}}</td>
+                <td>{{data.remainingAmount}}</td>
+                <td>{{data.defaulterCount}}</td>
+                <td>{{data.monthlyEMI}}</td>
+                <td>{{data.previousEmiStatus}}</td>
+                <td>{{data.currentMonthEmiStatus}}</td>
+                <td>{{data.loanEndDate}}</td>
+                <td>{{data.loanStatus}}</td>
+      
+
+                
+                <!-- <td><a [routerLink]="['employeedetail',data.id]" >show details</a>
+                    <a class="btn" [routerLink]="['update']" [state]="data">
+                        <i class="fa fa-edit" style="color: rgb(33, 153, 9);"></i>
+                    </a>
+                <a class="btn">
+                        <i class="fa fa-trash " style="color: red;" (click)="deleteemployee(data.id)"></i>
+                    </a>
+                </td> -->
+            </tr>
+      
+    </table>
+    
+    <!-- <div align="center">
+        <a class="btn btn-info float-right" routerLink="/login/header/employee">Back</a>
+    </div> -->
+        <!-- <button class="btn btn-info float-right" (click)="getback()">Go Back</button> -->
+        <div style="text-align: center;">
+        <button type="button" class="btn btn-outline-dark" (click)="filedownload()">Export Excel Ledger Report</button>
+    </div>
+</div><br><br>
+

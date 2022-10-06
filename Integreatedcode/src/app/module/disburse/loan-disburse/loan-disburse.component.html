@@ -1,0 +1,67 @@
+<div class="row">
+  <div class="col-md-3">
+  </div>
+   <div class="col-md-6">
+     <form [formGroup]="bankForm" (ngSubmit)="onSubmit()" style="width: auto; height: auto; color: rebeccapurple" >
+  <div *ngFor="let d of l">
+  <div class="form-row" style="align-content: center;">
+    <div class="col-6"><label><strong>Loan Id</strong></label>
+      <input type="text" class="form-control" value="{{d.loanAid}}">
+    </div>
+    <div class="col-6"><label><strong>Customer Name</strong></label>
+      <input type="text" class="form-control" value="{{d.applicant.customer.fullName}}" >        <!--   value="{{d.applicant.customer.fullName}}" -->
+    </div>
+ 
+    <div class="col-6"><label><strong>Sanction Amount(Rs)</strong></label>
+      <input type="text" class="form-control" value="{{d.sanction.sanctionedLoanAmount}}">
+    </div>
+    <div class="col-6"><label><strong>Cibil Score</strong></label>
+      <input type="text" class="form-control" value="{{d.applicant.cibil.cibilScore}}">
+    </div>
+
+    <div class="col-6"><label><strong>Total Amount(Rs)</strong></label>
+      <input type="text" class="form-control" value="{{d.totalAmount}}">
+    </div>
+    <div class="col-6"><label><strong>Total Loan Required(Rs)</strong></label>
+      <input type="text" class="form-control" value="{{d.loanDetails.totalLoanRequired}}">
+    </div>
+  
+    <div class="col-6"><label><strong>Monthly EMI Amount</strong></label>
+      <input type="text" class="form-control" value="{{d.monthlyEMIAmount}}">
+    </div>
+    <div class="col-6"><label><strong>Tenure of Loan(In Months)</strong></label>
+      <input type="text" class="form-control" value="{{d.loanDetails.tenureofLoan}}">
+    </div>
+
+    <div class="col-6"><label><strong>Bank Id</strong></label>
+      <input type="text" class="form-control" value="{{d.applicant.bankdetails.bankId}}">
+    </div>
+    <div class="col-6"><label><strong>Customer Account Number</strong></label>
+      <input type="text" class="form-control" value="{{d.applicant.bankdetails.caccountNo}}">
+    </div>
+
+    <div class="col-6"><label><strong>Bank IFSC Code</strong></label>
+      <input type="text" class="form-control" value="{{d.applicant.bankdetails.ifscCode}}">
+    </div>
+    <div class="col-6"><label><strong>Bank MICR Code</strong></label>
+      <input type="text" class="form-control" value="{{d.applicant.bankdetails.micrcode}}">
+    </div><br>
+
+    <div class="col-6"><label><strong>Bank Name</strong></label>
+      <input type="text" class="form-control" value="{{d.applicant.bankdetails.bankName}}">
+    </div>
+    <div class="col-6"><label><strong>Branch Address</strong></label>
+      <input type="text" class="form-control" value="{{d.applicant.bankdetails.branchAddress}}">
+    </div>
+  </div><br>
+  <div style="text-align: center;">
+  <button type="submit" class="btn btn-dark" >Disburse</button>
+  
+</div>
+</div>
+</form>
+  </div>
+   <div class="col-md-3">    
+  </div>
+</div>
+         

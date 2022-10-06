@@ -1,0 +1,27 @@
+
+<form [formGroup]="registrationForm" (ngSubmit)="onsubmit()"> 
+    <!--registration form start -->
+    <h3 style="text-align:center;"  >! Email Sending !</h3>
+    <div class="jumbotron" >
+    <table class="table table-dark center " style="text-align:center;" border="1"  >
+        <tr>
+            <td>To Email Send </td>
+            <td> <input type="text" formControlName="toEmail" placeholder="Enter Email"></td>
+        </tr>
+        <tr>
+            <td> Subject</td>
+            <td> <input type="text" formControlName="subject" placeholder="Subject"></td>
+        </tr>
+        <tr>
+            <td>TextMassage </td>
+            <td> <input type="text" formControlName="textMassage" placeholder="TextMassage"></td>
+        </tr>
+       
+    </table>
+    <div style="text-align:center;">
+    <button  class="btn btn-primary" type="submit">Send Email</button>&nbsp;&nbsp;
+      <button class="btn btn-primary" type="submit" (click)="goBack()"> back </button>  
+     <!-- <button class="btn btn-primary" type="submit" routerLink="/login"> back </button>  -->
+    </div>
+</div>
+</form>

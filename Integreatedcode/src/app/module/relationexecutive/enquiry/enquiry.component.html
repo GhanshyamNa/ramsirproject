@@ -1,0 +1,72 @@
+
+<div class="card m-3">
+    <h3 style="text-align: center; color: rgb(21, 0, 211);">!! Enquiry Form !!</h3>
+    <div class="card-body">
+        <form [formGroup]="registrationForm" (ngSubmit)="onsubmit()">
+            <div class="form-row">
+              
+                <div class="form-group col">
+                    <label>Full Name</label>
+                    <input type="text" formControlName="fullName" class="form-control" placeholder="Enter Full Name"  />
+                   
+                </div>
+                <div class="form-group col">
+                    <label>Age</label>
+                    <input type="text" formControlName="age" class="form-control" placeholder="Enter Age"  />
+                   
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col">
+                    <label>DOB</label>
+                    <input type="date" formControlName="dob" class="form-control" placeholder="Enter DOB"  />
+                    
+                </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="form-group col">
+                    <label>Gender</label><br>
+
+                    <input type="radio" name="gender" value="male" formControlName="gender" > Male
+                    <input type="radio" name="gender" value="female" formControlName="gender"> Female
+                    <input type="radio" name="gender" value="other" formControlName="gender"> Other
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group col">
+                    <label>Email</label>
+                    <input type="text" formControlName="email" class="form-control" placeholder="Enter  Email"  />
+                    
+                </div>
+                <div class="form-group col">
+                    <label>Mobile No.</label>
+                    <input type="text" formControlName="mobileNo" class="form-control" placeholder="Enter  Mobile NO"/>
+                   
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col">
+                    <label>Pancard Number</label>
+                    <input type="text" formControlName="pancardNo" class="form-control" placeholder="Enter  PanCard No"  />
+                    
+                </div>
+                <div class="form-group col">
+                    <label>Aadhar Card Number</label>
+                    <input type="text" formControlName="aadharNo" class="form-control" placeholder="Enter AadharCard No" />
+                   
+                </div>
+            </div>
+            <!-- <div class="form-group form-check">
+                <input type="checkbox" formControlName="acceptTerms" id="acceptTerms" class="form-check-input"  />
+            </div> -->
+            <div class="text-center">
+                <button class="btn btn-primary mr-1">Register</button>
+                <button class="btn btn-secondary" style="text-align: right;" type="reset" (click)="goBack()">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,42 @@
+
+
+<mat-drawer-container><mat-drawer-content style="background-color: black;">
+    <main class="py-6 bg-surface-secondary">
+        <div class="container-fluid">
+            <div class="card shadow border-0 mb-7">
+                <div class="card-header" style="background-image: url('https://images.hdqwalls.com/download/dillusion-abstract-4k-z5-1920x1080.jpg');">
+                    <h2 class="mb-0" style="color: white;"><mat-icon>list_alt</mat-icon><B style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >CIBIL LIST</B></h2>
+                </div>
+                <div class="table-responsive" style="color: white; background-color: black;">
+                    <table class="table table-hover table-dark" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white; background-color: black;" >
+                        <thead style="color: white; background-color: black;">
+                            <tr >
+                              <th scope="col">CUSTOMER ID</th>
+                              <th scope="col">FULL NAME</th>
+                              <th scope="col">PANCARD NO.</th>
+                              <th scope="col">EMAIL</th>
+                              <th scope="col">CIBIL SCORE</th>
+                              <th scope="col">CIBIL STATUS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="table-active" *ngFor="let c of cibil">
+                            <td>{{c.customer.customerId}}</td>
+                            <td>{{c.customer.fullName}}</td>
+                            <td>{{c.customer.pancardNo}}</td>
+                            <td>{{c.customer.email}}</td>
+                            <td>{{c.cibilScore}}</td>
+                            <td>{{c.cibilStatus}}</td>
+                            <!-- <td class="text-end"><a><button class="btn btn-outline-success" (click)="emailed(c.customer)"><i class="bi bi-people">Email</i></button></a></td>                           -->
+                          
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+                <button style="color: white; background-image: url('https://images.hdqwalls.com/download/dillusion-abstract-4k-z5-1920x1080.jpg'); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"   class="float-right" (click)="getback()">BACK</button>
+        </div>
+    </main>
+</mat-drawer-content></mat-drawer-container>
+
+    <router-outlet></router-outlet>
+

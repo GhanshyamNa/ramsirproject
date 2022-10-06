@@ -1,0 +1,58 @@
+
+<mat-drawer-container><mat-drawer-content style="background-color: black;">
+    <main class="py-6 bg-surface-secondary">
+        <div class="container-fluid">
+            <div class="card shadow border-0 mb-7" >
+                <div class="card-header" style="background-image: url('https://images.hdqwalls.com/download/dillusion-abstract-4k-z5-1920x1080.jpg');" >
+                    <h2 class="mb-0" style="color: white;"><mat-icon>insert_chart</mat-icon><B style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >CIBIL</B></h2>
+                </div>
+                <div class="table-responsive" style="color: white; background-color: black;">
+                    <table class="table table-hover table-dark" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                        <thead style="color: white; background-color: black;">
+                            <tr>
+                                <th scope="col">CUSTOMER ID</th>
+                                <th scope="col">FULL NAME</th>
+                                <th scope="col">GENDER</th>
+                                <th scope="col">DOB</th>
+                                <th scope="col">AGE</th>
+                                <th scope="col">MOBILE NO.</th>
+                                <th scope="col">EMAIL</th>
+                                <th scope="col">PANCARD NO.</th>
+                                <th scope="col">AADHAR NO.</th>
+                                
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody style="color: white; background-color: black;">
+                            <tr class="table-active" *ngFor="let cus of customer">
+                                <td>{{cus.customerId}}</td>
+                                <td>{{cus.fullName}}</td>
+                                <td>{{cus.gender}}</td>
+                                <td>{{cus.dob}}</td>
+                                <td>{{cus.age}}</td>        
+                                <td>{{cus.mobileNo}}</td>
+                                <td>{{cus.email}}</td>
+                                <td>{{cus.pancardNo}}</td>
+                                <td>{{cus.aadharNo}}</td>
+                                
+                                <td class="text-end"><a [routerLink]="['cibilgeneration',cus.customerId]" > <button style="color: white; background-image: url('https://images.hdqwalls.com/download/dillusion-abstract-4k-z5-1920x1080.jpg'); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >GENERATE CIBIL</button></a></td>
+                                
+                                
+                           
+    
+                        </tbody>
+                    </table>
+                    
+                </div>
+                
+             
+            </div>
+            <button style="color: white; background-image: url('https://images.hdqwalls.com/download/dillusion-abstract-4k-z5-1920x1080.jpg'); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"   class="float-right" (click)="getback()">BACK</button>
+        </div>
+        
+    </main>
+</mat-drawer-content></mat-drawer-container>
+
+    <router-outlet></router-outlet>
+
+

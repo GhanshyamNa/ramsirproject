@@ -1,0 +1,117 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+ <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+ <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+ 
+ 
+  <div class="container">
+        <table class="table table-striped">
+           <tbody>
+              <tr>
+                 <td colspan="1">
+                    <form class="well form-horizontal" [formGroup]="ledgerForm" (ngSubmit)="onSubmit()">
+                       <fieldset>
+                          <div class="form-group">
+                             <label class="col-md-4 control-label" >LedgerId</label>
+                             <div class="col-md-6 inputGroupContainer">
+                                <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span><input  placeholder="LedgerId" class="form-control" required="true" value="" type="text"  formControlName="ledgerId"></div>
+                             </div>
+                          </div>
+                          <div class="form-group">
+                             <label class="col-md-4 control-label">Customer Full Name</label>
+                             <div class="col-md-6 inputGroupContainer">
+                                <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span><input  placeholder="Customer Full Name" class="form-control" required="true" value="" type="text"  formControlName="customerName"></div>
+                             </div>
+                          </div>
+                          <div class="form-group">
+                             <label class="col-md-4 control-label">Ledger Creation Date</label>
+                             <div class="col-md-6 inputGroupContainer">
+                                <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-dashboard"></i></span><input  placeholder="Ledger Creation Date" class="form-control" required="true" value="" type="text" formControlName="ledgerCreationDate"></div>
+                             </div>
+                          </div>
+                          <div class="form-group">
+                             <label class="col-md-4 control-label">Total Loan Amount(In Rs)</label>
+                             <div class="col-md-6 inputGroupContainer">
+                                <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-usd"></i></span><input  placeholder="Total Loan Amount" class="form-control" required="true" value="" type="text" formControlName="totalLoanAmount" ></div>
+                             </div>
+                          </div>
+                          <div class="form-group">
+                             <label class="col-md-4 control-label">Payable Amount With Intrest(In Rs)</label>
+                             <div class="col-md-6 inputGroupContainer">
+                                <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-usd"></i></span><input  placeholder="Payable Amount With Intrest" class="form-control" required="true" value="" type="text" formControlName="payableAmountWithIntrest"></div>
+                             </div>
+                          </div>
+ 
+                          <div class="form-group">
+                             <label class="col-md-4 control-label">Tenure (In Months)</label>
+                             <div class="col-md-6 inputGroupContainer">
+                                <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-dashboard"></i></span><input  placeholder="Tenure In Years" class="form-control" required="true" value="" type="text" formControlName="tenureInYear"></div>
+                             </div>
+                          </div>
+ 
+                          <div class="form-group">
+                             <label class="col-md-4 control-label">Monthly EMI(In Rs)</label>
+                             <div class="col-md-6 inputGroupContainer">
+                                <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-usd"></i></span><input placeholder="Monthly EMI" class="form-control" required="true" value="" type="text" formControlName="monthlyEMI"></div>
+                             </div>
+                          </div>
+ 
+                          <div class="form-group">
+                             <label class="col-md-4 control-label"> AmountPaid Till Date</label>
+                             <div class="col-md-6 inputGroupContainer">
+                                <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-usd"></i></span><input  placeholder=" AmountPaid Till Date" class="form-control" required="true" value="" type="text" formControlName="amountPaidTillDate"></div>
+                             </div>
+                          </div>
+ 
+ 
+                          <div class="form-group">
+                             <label class="col-md-4 control-label">Remaining Amount</label>
+                             <div class="col-md-6 inputGroupContainer">
+                                <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-usd"></i></span><input placeholder="Remaining Amount" class="form-control" required="true" value="" type="text" formControlName="remainingAmount"></div>
+                             </div>
+                          </div>
+                          <div class="form-group">
+                             <label class="col-md-4 control-label">Defaulter Count</label>
+                             <div class="col-md-6 inputGroupContainer">
+                                <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span><input  placeholder="Defaulter Count" class="form-control" required="true" value="" type="text" formControlName="defaulterCount"></div>
+                             </div>
+                             <div class="form-group">
+                                 <label class="col-md-4 control-label">Previous EMI Status</label>
+                                 <div class="col-md-6 inputGroupContainer">
+                                    <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span><input  placeholder="Previous EMI Status" class="form-control" required="true" value="" type="text" formControlName="previousEmiStatus"></div>
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <label class="col-md-4 control-label">Current Month EMI Status</label>
+                                 <div class="col-md-6 inputGroupContainer">
+                                    <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span><input placeholder="Current Month EMI Status" class="form-control" required="true" value="" type="text" formControlName="currentMonthEmiStatus"></div>
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <label class="col-md-4 control-label">Loan End Date</label>
+                                 <div class="col-md-6 inputGroupContainer">
+                                    <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-dashboard"></i></span><input  placeholder="Loan End Date" class="form-control" required="true" value="" type="text" formControlName="loanEndDate"></div>
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <label class="col-md-4 control-label">Loan Status</label>
+                                 <div class="col-md-6 inputGroupContainer"><div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-usd"></i></span><input placeholder="Loan Status" class="form-control" required="true" value="" type="text" formControlName="loanStatus"></div>
+                                 </div>
+                              </div>
+
+                              <div style="text-align: center;" >
+                                 <button class="btn btn-success" type="submit">Create</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                                 <button class="btn btn-danger" type="reset">Reset</button>
+                              </div>
+                             
+                             <!-- <input type="submit" value="Create" class="btn btn-success" style="text-align: center;" > &nbsp;&nbsp;&nbsp;&nbsp;
+                              <input class="btn btn-primary" type="reset" value="Reset" style="text-align: center;"> -->
+                              
+                          </div>
+                       </fieldset>
+                    </form>
+                 </td>
+                 </tr>
+           </tbody>
+        </table>
+       
+     </div> 

@@ -1,0 +1,120 @@
+<div class="row" id="sanctionletter">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8" >
+        <div class="card rounded shadow" >
+            <div class="card-body">
+                <h3 class="card-title text-center">Loan Sanction Letter</h3> <i class="fa-solid fa-xmark-large"></i>
+                <hr>
+                <form>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>Date</th>
+                                <td><b>:</b>&nbsp;&nbsp; {{sanctionObj.sanctionDate}}</td>
+                            </tr>
+                            <tr>
+                                <th>Applicant Id</th>
+                                <td><b>:&nbsp;&nbsp;</b>{{sanctionObj.lal.applicant.applicationId}}</td>
+                            </tr>
+                            <tr>
+                                <th>Applicant Name</th>
+                                <td><b>:&nbsp;&nbsp;</b>{{sanctionObj.lal.applicant.customer.fullName}}</td>
+                            </tr>
+                            <tr>
+                                <th>Applicant Contact No</th>
+                                <td><b>:&nbsp;&nbsp;</b>{{sanctionObj.lal.applicant.customer.mobileNo}}</td>
+                            </tr>
+                            <tr>
+                                <th>Applicant Current Address</th>
+                                <td><b>:&nbsp;&nbsp;</b>{{sanctionObj.lal.applicant.caddr.streetName}},{{sanctionObj.lal.applicant.caddr.areaName}},{{sanctionObj.lal.applicant.caddr.cityName}},{{sanctionObj.lal.applicant.caddr.districtName}},{{sanctionObj.lal.applicant.caddr.pincodeNo}}</td>
+                            </tr>
+                            <tr>
+                                <th>Applicant Permanent Address</th>
+                                <td><b>:&nbsp;&nbsp;</b>{{sanctionObj.lal.applicant.paddr.streetName}},{{sanctionObj.lal.applicant.paddr.areaName}},{{sanctionObj.lal.applicant.paddr.cityName}},{{sanctionObj.lal.applicant.paddr.districtName}},{{sanctionObj.lal.applicant.paddr.pincodeNo}}</td>
+                            </tr>
+                        </tbody>
+                    </table> <br>
+                    <label>Dear Customer,</label><br>
+                    <p>
+                        We thank you for choosing WCS Finance Ltd. We are pleased to inform you that with referene to your loan application under above mentioned application number we have sanctioned your loan. Details of the said loan facility are as under : 
+                    </p>
+                    <div class="row">
+                        <div class="col-md-3">
+                        </div>
+                        <div class="col-md-6">
+                            <table border="2px">
+                                <tbody>
+                                    <tr>
+                                        <th>Loan Amount Sanctioned</th>
+                                        <td>{{sanctionObj.principalAmount}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Loan Term</th>
+                                        <td>{{sanctionObj.lal.applicant.loandetails.tenureofLoan}}<span>&nbsp;Years</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Monthly EMI</th>
+                                        <td>{{sanctionObj.monthlyEMIAmount}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Total EMI</th>
+                                        <td>{{sanctionObj.totalInterest}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Total Amount Payable</th>
+                                        <td>{{sanctionObj.totalAmount}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Interest Type</th>
+                                        <td>Fixed</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Interest Rate</th>
+                                        <td>{{sanctionObj.lal.sanction.rateofInterest}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Delayed Payement Charges</th>
+                                        <td><b>3% flat on entire month</b></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Processing Fees + Service Tax</th>
+                                        <td><b>0.25% to 0.50% of Sanctioned Amount</b></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Due Date of EMI's</th>
+                                        <td><b>1st Date of Every Month</b></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-md-3">
+                        </div>
+                    </div>
+                    <label><u>Sanction subject to below mentioned special terms and conditions : </u></label><br>
+                    <label><u>The Sanction of the loan shall stand revoked and cancelled in any of the following circumstances : </u></label><br>
+                    <p><label>1.</label>If any of statement in the application or in loan and any ther document(s) given by you or otherwise found to be misleading or incorrect and/or</p>
+                    <p><label>2.</label>If there is any material change in the process in the basis of which the loan has, in principal,been offered and/or</p>
+                    <p><label>3.</label>If any material fact concerning your income, employment, or ability to repay or any other relevant aspect of your proposal for the loan is suppressed or concealed and/or</p>
+                    <p><label>4.</label>If you fail to submit the documents as required by WCS Finance Ltd. within spcified time.</p>
+                    <p><label>5.</label>Any other reason at the sole discreation of the Lender.</p>
+                    <p>In case of any query or assistance please contact us, at the below mentioned address or alternatively you can e-mail us at <a href="#"><u>reach@wcsfinance.com</u></a></p>
+                    <br>
+                    <label>For WCS Finance Ltd.</label><br>
+                    <p>1st Floor,<br>Above Rupam Sweets,<br>Priyanka Collections Building,<br>Near Karvenagar Stop,<br>Karvenagar, Pune-411052.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 text-center">
+        <button type="button" class="btn btn-success" style="width:100px; height: 40px; font-size:medium;" (click)="generatePDF()">Generate</button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" class="btn btn-warning" style="width:120px; height: 40px; font-size:medium;" (click)="goBack()">Back</button>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+
